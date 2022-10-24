@@ -54,4 +54,4 @@
 # - 2 -> 10
 
 # a = int(input("Введите число: "))
-# print(format(a,'b'))
+# print(format(a, 'b'))
