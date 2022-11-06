@@ -17,45 +17,45 @@
 # Первый ход определяется жеребьёвкой. За один ход можно забрать не более чем 28 конфет.
 #  Все конфеты оппонента достаются сделавшему последний ход. 
 # Сколько конфет нужно взять первому игроку, чтобы забрать все конфеты у своего конкурента?
-
-import random
-
-
-
-player1 = input('Введите имя первого игрока: ')
-player2 = input('Введите имя второго игрока: ')
-print("Идет жеребьевка")
-motion = random.randint(1,2)
-candy = 100
-max_sweets = 28
-if motion == 1: print(f'Игрок {player1} по результатам жерьебьёвки победил и ходит первым')
-else: print(f'Игрок {player2} по результатам жерьебьёвки победил и ходит первым')
-while candy > 0:
-    if motion == 1:
-        print(f'игрок {player1}, Ваш ход! Укажите кол-во забираемых конфет , осталось {candy} шт.')
-        max_sweets = int(input('(не более 28шт): '))
-        if max_sweets <= 28:
-            candy -= max_sweets
-            motion = 2
-        else:
-            print('Не честно! ')
-            max_sweets = 1
-    if motion == 2:
-        print(f'игрок {player2}, Ваш ход! Укажите кол-во забираемых конфет , осталось {candy} шт.')
-        max_sweets = int(input('(не более 28шт): '))
-        if max_sweets <= 28:
-            candy -= max_sweets
-            motion = 1
-        else:
-            print('не честно! ')
-            max_sweets = 1
-    if candy <= 28:
-        if motion == 1:
-            print(f'Осталось {candy} конфет {player1} забирает их, Победа! кариес обеспечен!)')
-            break
-        else:
-            print(f'Осталось {candy} конфет {player2} забирает их, Победа! кариес обеспечен!)')
-            break
+#
+# import random
+#
+#
+#
+# player1 = input('Введите имя первого игрока: ')
+# player2 = input('Введите имя второго игрока: ')
+# print("Идет жеребьевка")
+# motion = random.randint(1,2)
+# candy = 100
+# max_sweets = 28
+# if motion == 1: print(f'Игрок {player1} по результатам жерьебьёвки победил и ходит первым')
+# else: print(f'Игрок {player2} по результатам жерьебьёвки победил и ходит первым')
+# while candy > 0:
+#     if motion == 1:
+#         print(f'игрок {player1}, Ваш ход! Укажите кол-во забираемых конфет , осталось {candy} шт.')
+#         max_sweets = int(input('(не более 28шт): '))
+#         if max_sweets <= 28:
+#             candy -= max_sweets
+#             motion = 2
+#         else:
+#             print('Не честно! ')
+#             max_sweets = 1
+#     if motion == 2:
+#         print(f'игрок {player2}, Ваш ход! Укажите кол-во забираемых конфет , осталось {candy} шт.')
+#         max_sweets = int(input('(не более 28шт): '))
+#         if max_sweets <= 28:
+#             candy -= max_sweets
+#             motion = 1
+#         else:
+#             print('не честно! ')
+#             max_sweets = 1
+#     if candy <= 28:
+#         if motion == 1:
+#             print(f'Осталось {candy} конфет {player1} забирает их, Победа! кариес обеспечен!)')
+#             break
+#         else:
+#             print(f'Осталось {candy} конфет {player2} забирает их, Победа! кариес обеспечен!)')
+#             break
 
 # Задча №4
 # Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
