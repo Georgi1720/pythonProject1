@@ -39,7 +39,7 @@
 #             motion = 2
 #         else:
 #             print('Не честно! ')
-#             max_sweets = 1
+#             max_sweets = int(input('(не более 28шт): '))
 #     if motion == 2:
 #         print(f'игрок {player2}, Ваш ход! Укажите кол-во забираемых конфет , осталось {candy} шт.')
 #         max_sweets = int(input('(не более 28шт): '))
@@ -48,7 +48,7 @@
 #             motion = 1
 #         else:
 #             print('не честно! ')
-#             max_sweets = 1
+#             max_sweets = int(input('(не более 28шт): '))   
 #     if candy <= 28:
 #         if motion == 1:
 #             print(f'Осталось {candy} конфет {player1} забирает их, Победа! кариес обеспечен!)')
